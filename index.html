@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produce Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-button active" data-tab="produce-status">Produce Status</button>
+        <button class="tab-button" data-tab="recipes">Recipes</button>
+        <button class="tab-button" data-tab="settings">Settings</button>
+    </div>
+
+    <!-- Produce Status Tab -->
+    <div class="tab-content active" id="produce-status">
+        <div class="section">
+            <h2>Use it Soon Produce</h2>
+            <p>These items are close to spoiling. Plan to use them soon to avoid waste.</p>
+            <a href="#" id="view-use-soon">View Produce</a>
+        </div>
+        <div class="section">
+            <h2>Spoiled - Throw it Away</h2>
+            <p>These items are no longer safe to consume and should be discarded.</p>
+            <a href="#" id="view-throw-away">View Produce</a>
+        </div>
+        <div class="section">
+            <h2>Check Produce</h2>
+            <p>Items that may need a quick check to see if they are still fresh.</p>
+            <a href="#" id="view-check-produce">View Produce</a>
+        </div>
+        <div class="section">
+            <h2>Fresh Produce</h2>
+            <p>Items that are still fresh and good to use in your meals.</p>
+            <a href="#" id="view-fresh-produce">View Produce</a>
+        </div>
+    </div>
+
+    <!-- Recipes Tab -->
+    <div class="tab-content" id="recipes">
+        <h2>Recipes</h2>
+        <p>Here you can find and manage recipes based on your available produce.</p>
+        <div class="form-group" >
+            <label for="select-produce">Select Produce(s):</label>
+            <select id="select-produce">
+                <option value="">-- Select --</option>
+                <option value="strawberries">Strawberries</option>
+                <option value="blueberries">Blueberries</option>
+                <option value="apples">Apples</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="select-cuisine">Select Cuisine:</label>
+            <select id="select-cuisine">
+                <option value="">-- Select --</option>
+                <option value="american">American</option>
+                <option value="chinese">Chinese</option>
+                <option value="mexican">Mexican</option>
+                <option value="indian">Indian</option>
+                <option value="italian">Italian</option>
+            </select>
+        </div>
+        <a href="#" class="link-btn">Get recipes here</a>
+        <img src="./image/cutlery2.jpg" alt="Cutlery 2">
+        <img src="./image/wmremove-transformed.webp" alt="Man eating vegetables">
+    </div>
+
+    <!-- Settings Tab -->
+    <div class="tab-content" id="settings">
+        <h2>Settings</h2>
+        <div class="section">
+            <h3>Food Preferences</h3>
+            <div class="form-group">
+                <label for="food-preferences">Food preferences:</label>
+                <input type="text" id="food-preferences" placeholder="Enter preferences">
+            </div>
+            <div class="form-group">
+                <label for="allergies">Allergies:</label>
+                <input type="text" id="allergies" placeholder="List allergies">
+            </div>
+        </div>
+        <div class="section">
+            <h3>Notification</h3>
+            <div class="form-group">
+                <label for="notification-time">Notification time:</label>
+                <input type="time" id="notification-time">
+            </div>
+            <div class="form-group">
+                <label for="picture-frequency">Picture frequency (times/day):</label>
+                <input type="number" id="picture-frequency" min="1" max="7">
+            </div>
+        </div>
+    </div>
+
+    <!-- Use it Soon Produce Page -->
+    <div class="tab-content" id="use-soon-produce">
+        <h2>Use it Soon Produce</h2>
+        <div class="produce-gallery">
+            <div class="produce-item"><img src="./image/strawberry.jpeg" alt="Strawberries"><p>Strawberries</p></div>s
+        </div>
+        <a href="#" class="back-btn" id="back-from-use-soon">← Back to Produce Status</a>
+    </div>
+
+    <!-- Throw Away Produce Page -->
+    <div class="tab-content" id="throw-away-produce">
+        <h2>Spoiled - Throw it Away</h2>
+        <div class="produce-gallery">
+            <div class="produce-item"><img src="./image/spoiled_broccoli.png" alt="Broccoli"><p>Broccoli</p></div>
+        </div>
+        <a href="#" class="back-btn" id="back-from-throw-away">← Back to Produce Status</a>
+    </div>
+
+    <!-- Check Produce Page -->
+    <div class="tab-content" id="check-produce">
+        <h2>Check Produce</h2>
+        <div class="produce-gallery">
+            <div class="produce-item"><img src="./image/fresh_raspberries.webp" alt="Raspberries"><p>Raspberries</p></div>
+        </div>
+        <a href="#" class="back-btn" id="back-from-check">← Back to Produce Status</a>
+    </div>
+
+    <!-- Fresh Produce Page -->
+    <div class="tab-content" id="fresh-produce">
+        <h2>Fresh Produce</h2>
+        <div class="produce-gallery">
+            <div class="produce-item"><img src="./image/green_image.jpg" alt="Green Beans"><p>Green Beans</p></div>
+            <div class="produce-item"><img src="./image/blueberry.png" alt="Blueberries"><p>Blueberries</p></div>
+            <div class="produce-item"><img src="./image/cilantro.webp" alt="Cilantro"><p>Cilantro</p></div>
+        </div>
+        <a href="#" class="back-btn" id="back-from-fresh">← Back to Produce Status</a>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
